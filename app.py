@@ -27,7 +27,7 @@ def index():
         print(NPTA, TLTA, WCTA)
         from keras.models import load_model
         model = load_model("BKRNN/Lesson 5 BKRNN")
-        pred = model.predict([[[NPTA, TLTA, WCTA]]])
+        pred = model.predict([[NPTA, TLTA, WCTA]])
         print(pred)
         s = "The predicted bankrupcy score is" + str(pred)
         return (render_template("index.html", result = s))
