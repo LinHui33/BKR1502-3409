@@ -26,7 +26,7 @@ def index():
         WCTA = float(request.form.get("WCTA"))
         print(NPTA, TLTA, WCTA)
         from keras.models import load_model
-        model = load_model("Lesson 5 BKRNN")
+        model = load_model("BKRNN/Lesson 5 BKRNN")
         pred = model.predict([[[NPTA, TLTA, WCTA]]])
         print(pred)
         s = "The predicted bankrupcy score is" + str(pred)
